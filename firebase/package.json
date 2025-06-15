@@ -5,7 +5,8 @@
     "deploy": "firebase deploy --project $FIREBASE_PROJECT_ID",
     "deploy:firestore:rules": "firebase deploy --only firestore:rules --project $FIREBASE_PROJECT_ID",
     "deploy:functions": "firebase deploy --only functions --project $FIREBASE_PROJECT_ID",
-    "functions:cleanupPolicy": "firebase functions:artifacts:setpolicy --days 7 --location europe-west1 --project $FIREBASE_PROJECT_ID"
+    "functions:cleanupPolicy": "firebase functions:artifacts:setpolicy --days 7 --location europe-west1 --project $FIREBASE_PROJECT_ID",
+    "emulators:start": "firebase emulators:start --import=./data/export --export-on-exit --project $FIREBASE_PROJECT_ID"
   },
   "type": "module",
   "devDependencies": {
@@ -15,5 +16,8 @@
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-unicorn": "^59.0.1",
     "globals": "^16.2.0"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.4.0"
   }
 }
