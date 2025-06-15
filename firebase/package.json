@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "deploy": "firebase deploy --project $FIREBASE_PROJECT_ID",
+    "deploy:firestore:rules": "firebase deploy --only firestore:rules --project $FIREBASE_PROJECT_ID",
+    "deploy:functions": "firebase deploy --only functions --project $FIREBASE_PROJECT_ID",
+    "functions:cleanupPolicy": "firebase functions:artifacts:setpolicy --days 7 --location europe-west1 --project $FIREBASE_PROJECT_ID"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^59.0.1",
+    "globals": "^16.2.0"
+  }
+}
